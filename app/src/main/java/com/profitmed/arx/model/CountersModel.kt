@@ -1,4 +1,4 @@
-package com.profitmed.arx
+package com.profitmed.arx.model
 
 class CountersModel {
     val counters = mutableListOf(0, 0, 0)
