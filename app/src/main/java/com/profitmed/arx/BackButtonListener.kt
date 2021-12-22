@@ -1,4 +1,4 @@
-package com.profitmed.arx.view
+package com.profitmed.arx
 
 interface BackButtonListener {
     fun backPressed(): Boolean

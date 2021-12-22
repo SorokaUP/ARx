@@ -1,14 +1,13 @@
 package com.profitmed.arx.view
 
 import android.os.Bundle
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.github.terrakok.cicerone.androidx.AppNavigator
+import com.profitmed.arx.AndroidScreens
 import com.profitmed.arx.App
+import com.profitmed.arx.BackButtonListener
 import com.profitmed.arx.R
 import com.profitmed.arx.presenter.MainPresenter
 import com.profitmed.arx.databinding.ActivityMainBinding
-import com.profitmed.arx.model.CountersModel
-import com.profitmed.arx.model.GithubUsersRepo
 import moxy.MvpAppCompatActivity
 import moxy.ktx.moxyPresenter
 

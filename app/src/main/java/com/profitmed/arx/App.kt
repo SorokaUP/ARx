@@ -6,7 +6,8 @@ import com.github.terrakok.cicerone.Router
 
 class App : Application() {
     companion object {
-        lateinit var instance: App
+        internal lateinit var instance : App
+            private set
     }
 
     //Временно до даггера положим это тут

@@ -1,6 +1,7 @@
 package com.profitmed.arx.presenter
 
 import com.github.terrakok.cicerone.Router
+import com.profitmed.arx.AndroidScreens
 import com.profitmed.arx.model.GithubUser
 import com.profitmed.arx.model.GithubUsersRepo
 import com.profitmed.arx.view.IUserItemView
@@ -23,13 +24,17 @@ class UsersPresenter(val usersRepo: GithubUsersRepo, val router: Router) : MvpPr
 
     val usersListPresenter = UsersListPresenter()
 
+    fun openUser(user: GithubUser) {
+        router.navigateTo(AndroidScreens().user(user))
+    }
+
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
         viewState.init()
         loadData()
 
         usersListPresenter.itemClickListener = { itemView ->
-            //TODO: переход на экран пользователя c помощью router.navigateTo
+            openUser(usersRepo.getUsers()[itemView.pos])
         }
     }
 
